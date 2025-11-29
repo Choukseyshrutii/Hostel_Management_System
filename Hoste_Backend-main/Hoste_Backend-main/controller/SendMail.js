@@ -8,13 +8,13 @@ const sendMail = async (to, subject, text, html = "") => {
       
       secure: true,
       auth: {
-        user: "rahull727788@gmail.com", // your email
+        user: "choukseyshruti28@gmail.com", // your email
         pass: "hxnbjbmuisyxnukq",        // your app password
       },
     });
 
     const info = await transporter.sendMail({
-      from: '"Hostel Admin" <rahull727788@gmail.com>',
+      from: '"Hostel Admin" <choukseyshruti28@gmail.com>',
       to,               // string or array of emails
       subject,
       text,

@@ -236,11 +236,7 @@ exports.signupRequest = async (req, res) => {
       }
     }
 
-    // Allow only NIT JSR emails
-    // if (!email.endsWith("@nitjsr.ac.in")) {
-    //   return res.status(400).json({ success: false, message: "Only NIT JSR emails allowed" });
-    // }
-
+    
     // Block if already registered
     const existingUser = await details.findOne({ email });
     if (existingUser) {
@@ -260,7 +256,7 @@ exports.signupRequest = async (req, res) => {
     // Send OTP mail
     await sendMail(
       email,
-      "NIT JSR Hostel App - Email Verification",
+      "IIT BHU Hostel App - Email Verification",
       `Your OTP is ${otp}. It is valid for 5 minutes.`
     );
 
